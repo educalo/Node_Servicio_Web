@@ -1,0 +1,36 @@
+1.- Tener instalado node.js en visual studio code
+2.- Abrir una terminar dentro de la carpeta de trabajo
+3.- Añadir el comoando npm init -y (este ultimo es para que coja los valores por defecto y no empiece a preguntar
+4.- Con esto me añade un fichero packege.json este fichero nos va a servir para gestionar los paquetes y dependecias de nuestro proyecto, en nuestro caso solo tenemos la dependencia json server
+5.- npm i json-server -D   instalar (i) la dependencia json-server como desarrollo (-D)
+6.- se crea una nueva carpeta que se llama node modules en nuestro proyecto y dentro del fichero package.json
+7.- Cada vez que queramos utlizar este servicio debemos poner en la linea de comando npm i
+8.- Parto de un archivo api.json donde tengo los datos guardados
+9.- Sobreescribo esta referencia dentro del fichero package.json   
+	"scripts": {
+		    "servicio": "json-server --port 8081 --watch api.json"
+10.- npm run servicio
+11.- Ahora tengo acceso acceso a json a traves de una URL
+12.- Echar un vistazo a la web donde nos aparece ducuemntacion de json y como hacer get, post, put... https://github.com/typicode/json-server 
+12.- hospscath similar a postman https://hoppscotch.io/
+
+13.-ahora puedo jugar con esta pagina, por ejemplo añadir un nuevo comentariio utilizando el metodo post y formato json para ello voy a copiar el mismo formato de api.json 
+
+Este ejemplo pertenece al artículo "Cómo crear una API REST de ejemplo para pruebas y depuración en menos de 3 minutos"
+que puedes encontrar en: https://www.campusmvp.es/recursos/post/como-crear-una-api-rest-de-ejemplo-para-pruebas-y-depuracion-en-menos-de-3-minutos.aspx
+
+Para restaurar los paquetes np y poner el servicio en funcionamiento debes escribir:
+
+npm i
+
+desde una línea de comandos (Windows, Linux o macOS) ubicada en la misma carpeta donde copies los archivos.
+
+
+                                      __  ____      _______          
+                                     |  \/  \ \    / /  __ \         
+   ___ __ _ _ __ ___  _ __  _   _ ___| \  / |\ \  / /| |__) |__  ___ 
+  / __/ _` | '_ ` _ \| '_ \| | | / __| |\/| | \ \/ / |  ___/ _ \/ __|
+ | (_| (_| | | | | | | |_) | |_| \__ \ |  | |  \  /  | |_ |  __/\__ \
+  \___\__,_|_| |_| |_| .__/ \__,_|___/_|  |_|   \/   |_(_) \___||___/
+                     | |                                             
+                     |_|                                             
