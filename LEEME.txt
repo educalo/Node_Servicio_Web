@@ -2,19 +2,30 @@
 2.- Abrir una terminar dentro de la carpeta de trabajo
 3.- Añadir el comoando npm init -y (este ultimo es para que coja los valores por defecto y no empiece a preguntar
 4.- Con esto me añade un fichero packege.json este fichero nos va a servir para gestionar los paquetes y dependecias de nuestro proyecto, en nuestro caso solo tenemos la dependencia json server
-5.- npm i json-server -D   instalar (i) la dependencia json-server como desarrollo (-D)
+5.- json-server: JSON Server es un módulo NPM muy útil, de código abierto y publicado bajo la licencia MIT, que permite a los desarrolladores crear prototipos de su Back-end realmente rápido, creando una API REST falsa a partir de un archivo JSON simple
+5a.- npm i json-server -D   instalar (i) la dependencia json-server como desarrollo (-D)
 6.- se crea una nueva carpeta que se llama node modules en nuestro proyecto y dentro del fichero package.json
 7.- Cada vez que queramos utlizar este servicio debemos poner en la linea de comando npm i
-8.- Parto de un archivo api.json donde tengo los datos guardados
+8.- Parto de un archivo api.json donde tengo los datos guardados, autores, posts y comentarios que estan relacionados
 9.- Sobreescribo esta referencia dentro del fichero package.json   
 	"scripts": {
 		    "servicio": "json-server --port 8081 --watch api.json"
-10.- npm run servicio
-11.- Ahora tengo acceso acceso a json a traves de una URL
+10.- lanzo el siguiente comando "npm run servicio"
+11.- Ahora tengo acceso acceso a los tres objetos javascript almacenados en el json a traves de una URL
+11a.- Si por ejemplo pongo http://localhost:8081/autores/1 me devuelve el primer autor
+11b.- si pongo   http://localhost:8081/posts/?autor=2 me devuelve los post con autor=2
+
 12.- Echar un vistazo a la web donde nos aparece ducuemntacion de json y como hacer get, post, put... https://github.com/typicode/json-server 
 12.- hospscath similar a postman https://hoppscotch.io/
 
-13.-ahora puedo jugar con esta pagina, por ejemplo añadir un nuevo comentariio utilizando el metodo post y formato json para ello voy a copiar el mismo formato de api.json 
+13.-Ahora puedo jugar con esta pagina, por ejemplo añadir un nuevo comentariio utilizando el metodo post y formato json para ello voy a copiar el mismo formato de api.json 
+
+13a.- con postman o con hoppscoth.io puedo añadir datos al servicio json con el metodo post
+    meto el Metodo POST y URL http;//localhost:3000/comentarios, el curso pongo
+    en el cuerpo:{"id":2, "mensaje": "Un curso", "postId:2} 
+    esto añadiendo un dato a mi fichero api.json
+
+14.- Puedo interactuar con un cliente dentro de la carpeta metodos, echad un vistazo
 
 Este ejemplo pertenece al artículo "Cómo crear una API REST de ejemplo para pruebas y depuración en menos de 3 minutos"
 que puedes encontrar en: https://www.campusmvp.es/recursos/post/como-crear-una-api-rest-de-ejemplo-para-pruebas-y-depuracion-en-menos-de-3-minutos.aspx

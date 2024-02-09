@@ -1,0 +1,3 @@
+1.- Seleccionar cualquier de los cuatro metodo seleccionador loe vs code y dar go live
+2.- En consola se puede ver el resultado
+
